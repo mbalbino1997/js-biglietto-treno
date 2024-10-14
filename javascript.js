@@ -18,5 +18,5 @@ if (isNaN(kmNumber) || isNaN(userAge)) {
     }
 
     const finalPrice = ticketPrice-discount;
-    console.log("Il prezzo finale da pagare per il biglietto è: " + finalPrice);
+    console.log("Il prezzo finale da pagare per il biglietto è: " + finalPrice.toFixed(2));
 }
