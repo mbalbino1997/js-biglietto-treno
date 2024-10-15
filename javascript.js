@@ -2,8 +2,8 @@ const kmNumber = Math.round(parseInt(prompt("Inserisci il numero di km da percor
 const userAge = parseInt(prompt("Inserisci la tua età"));
 const ticketPrice = 0.21*kmNumber;
 let discount = 0;
-if (isNaN(kmNumber) || isNaN(userAge)) {
-    console.log("L'età e la distanza devono essere numeri");
+if ((isNaN(kmNumber) || isNaN(userAge)) && (kmNumber<0 || userAge<0)) {
+    console.log("L'età e la distanza devono essere numeri maggiori di 0");
 } else {
     if ( userAge < 18 ) {
         console.log("I minorenni hanno diritto ad uno sconto del 20%");
