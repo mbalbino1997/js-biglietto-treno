@@ -13,10 +13,12 @@ if (isNaN(kmNumber) || isNaN(userAge)) {
         discount = ticketPrice*0.4;
     } else {
         console.log("Non hai diritto allo sconto");
-        
-
+    
     }
 
     const finalPrice = ticketPrice-discount;
-    console.log("Il prezzo finale da pagare per il biglietto è: " + finalPrice.toFixed(2));
+    const finalPriceFormatted = new Intl.NumberFormat('it-IT', {
+        style: 'currency', currency: 'EUR',
+    }).format(finalPrice);
+    console.log('Il prezzo finale da pagare per il biglietto è: '+ finalPriceFormatted);
 }
